@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 15:46:23
- * @LastEditTime: 2019-11-04 17:51:50
- * @LastEditors: Please set LastEditors
+ * @LastEditTime : 2019-12-18 16:32:41
+ * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\App.vue
  -->
@@ -27,14 +27,17 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~@/assets/stylus.styl';
-#app{
+
+#app {
   height: 100vh;
+  font-size: 0.18rem;
 }
+
 .app-nav {
   position: fixed;
   display: flex;
   justify-content: space-around;
-  background-color: #eeeeee;
+  background-color: lowBGC;
   left: 0;
   bottom: 0;
   z-index: 999999;
@@ -42,7 +45,7 @@ export default {
   height: navHeight;
 
   .app-nav-item {
-    padding: 2px 5px;
+    padding: 0.02rem 0.05rem;
     text-align: center;
     line-height: navHeight;
     width: 100%;
@@ -50,4 +53,19 @@ export default {
     color: #666666;
   }
 }
+</style>
+
+<style lang="stylus">
+@import '~@/assets/stylus.styl';
+.border-10 {
+  border-bottom: 0.1rem solid lowBGC;
+
+  border-color: lowBGC;
+}
+.border-1 {
+  border-bottom : 0.01rem solid lowBGC;
+}
+.padding-10 {
+  padding 0.1rem 0
+  }
 </style>

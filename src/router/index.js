@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2019-11-04 16:10:50
- * @LastEditTime: 2019-11-04 16:30:05
- * @LastEditors: Please set LastEditors
+ * @LastEditTime : 2019-12-19 11:00:25
+ * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\router\index.js
  */
@@ -27,6 +27,16 @@ const routes = [{
     path: '/my',
     name: 'my',
     component: () => import('@/views/My.vue')
+  },
+  {
+    path: '/commonTools',
+    name: 'my',
+    component: () => import('@/views/CommonTools.vue')
+  },
+  {
+    path: '/discover',
+    name: 'my',
+    component: () => import('@/views/Discover.vue')
   }
 ]
 

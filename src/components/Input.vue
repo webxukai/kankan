@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
- * @Date: 2019-11-04 15:46:23
- * @LastEditTime : 2019-12-19 10:55:30
+ * @Date: 2019-12-18 16:18:17
+ * @LastEditTime : 2019-12-18 16:19:06
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \kankan\src\components\HelloWorld.vue
+ * @FilePath: \kankan\src\components\Input.vue
  -->
 <template>
 <div>
-  HelloWorld
+  Input
 </div>
 </template>
 
@@ -21,6 +21,6 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 
-</style> 
+</style>
