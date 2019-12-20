@@ -22,5 +22,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+@import '~@/assets/stylus.styl';
+  
 </style> 
