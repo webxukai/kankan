@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:10:50
- * @LastEditTime : 2019-12-19 13:54:16
+ * @LastEditTime : 2019-12-23 10:24:08
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\Home.vue
@@ -10,6 +10,7 @@
   <div class="wrapper">
     <HeaderBar2 />
     <RowBread class="row-bread-wrapper border-1" />
+    <Add />
     <BSContent class="b-s-content-wrapper">
       <HotPlate
         class="hot-plate-wrapper border-1"
@@ -27,13 +28,15 @@ import HeaderBar2 from "@/components/HeaderBar2.vue";
 import RowBread from "@/components/RowBread.vue";
 import BSContent from "@/components/BSContent.vue";
 import HotPlate from "@/components/HotPlate.vue";
+import Add from "@/components/Add.vue";
 export default {
   name: "home",
   components: {
     HeaderBar2,
     BSContent,
     RowBread,
-    HotPlate
+    HotPlate,
+    Add
   },
   data() {
     return {
@@ -42,9 +45,9 @@ export default {
           id: 1,
           title: "澳门回归20周年",
           img: [
-            "https://www.baidu.com/img/bd_logo1.png",
-            "https://stylus.bootcss.com/img/stylus-logo.svg",
-            "https://img-blog.csdnimg.cn/20191216172544126.png"
+            require("@/static/img/1.jpg") ,
+            require("@/static/img/2.jpg") ,
+            require("@/static/img/3.jpg") 
           ],
           StickFlag: true,
           author: "中文网",
@@ -55,9 +58,9 @@ export default {
           id: 2,
           title: "高铁试点电子客票",
           img: [
-            "https://www.baidu.com/img/bd_logo1.png",
-            "https://stylus.bootcss.com/img/stylus-logo.svg",
-            "https://img-blog.csdnimg.cn/20191216172544126.png"
+            require("@/static/img/4.jpg") ,
+            require("@/static/img/5.jpg") ,
+            require("@/static/img/6.jpg") 
           ],
           StickFlag: true,
           author: "掘金网",
@@ -69,9 +72,9 @@ export default {
           title:
             "Stylus是一款能改变网站样式的样式管理器，该插件主要能将他人提供的网页",
           img: [
-            "https://www.baidu.com/img/bd_logo1.png",
-            "https://stylus.bootcss.com/img/stylus-logo.svg",
-            "https://img-blog.csdnimg.cn/20191216172544126.png"
+            require("@/static/img/7.jpg") ,
+            require("@/static/img/8.jpg") ,
+            require("@/static/img/9.jpg") 
           ],
           StickFlag: false,
           author: "知乎网",
@@ -81,9 +84,9 @@ export default {
           id: 4,
           title: "澳门回归20周年",
           img: [
-            "https://www.baidu.com/img/bd_logo1.png",
-            "https://stylus.bootcss.com/img/stylus-logo.svg",
-            "https://img-blog.csdnimg.cn/20191216172544126.png"
+            require("@/static/img/2.jpg") ,
+            require("@/static/img/5.jpg") ,
+            require("@/static/img/8.jpg") 
           ],
           StickFlag: true,
           author: "中文网",
@@ -93,9 +96,9 @@ export default {
           id: 5,
           title: "澳门回归20周年",
           img: [
-            "https://www.baidu.com/img/bd_logo1.png",
-            "https://stylus.bootcss.com/img/stylus-logo.svg",
-            "https://img-blog.csdnimg.cn/20191216172544126.png"
+            require("@/static/img/9.jpg") ,
+            require("@/static/img/3.jpg") ,
+            require("@/static/img/6.jpg") 
           ],
           StickFlag: true,
           author: "中文网",
@@ -105,9 +108,9 @@ export default {
           id: 6,
           title: "澳门回归20周年",
           img: [
-            "https://www.baidu.com/img/bd_logo1.png",
-            "https://stylus.bootcss.com/img/stylus-logo.svg",
-            "https://img-blog.csdnimg.cn/20191216172544126.png"
+            require("@/static/img/7.jpg") ,
+            require("@/static/img/1.jpg") ,
+            require("@/static/img/9.jpg") 
           ],
           StickFlag: true,
           author: "中文网",
@@ -117,9 +120,9 @@ export default {
           id: 7,
           title: "澳门回归20周年",
           img: [
-            "https://www.baidu.com/img/bd_logo1.png",
-            "https://stylus.bootcss.com/img/stylus-logo.svg",
-            "https://img-blog.csdnimg.cn/20191216172544126.png"
+            require("@/static/img/5.jpg") ,
+            require("@/static/img/1.jpg") ,
+            require("@/static/img/4.jpg") 
           ],
           StickFlag: true,
           author: "中文网",

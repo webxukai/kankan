@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-19 15:46:06
- * @LastEditTime : 2019-12-19 15:48:06
+ * @LastEditTime : 2019-12-23 13:51:43
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\components\HeaderBar2.vue
@@ -9,7 +9,9 @@
 <template>
   <div class="wrapper">
     <div class="input-wrapper">
-      <div class="left">wode</div>
+      <div class="left">
+        <img src="@/static/img/3.jpg" alt="" srcset="">
+      </div>
       <input type="text" placeholder="请输入内容..." />
     </div>
     <div class="right">
@@ -40,6 +42,7 @@ export default {
   padding: 0 0.1rem;
   // border: 1px solid red;
   background-color: baseColor;
+  color #fff
 
   .input-wrapper {
     position: absolute;
@@ -51,11 +54,17 @@ export default {
     // border 1px solid red
     .left {
       position: absolute;
-      width: 20%;
-      height: 100%;
+      height: navHeight;
+      width: @height;
       text-align: center;
       line-height: navHeight;
-      // border 1px solid green
+      img {
+        box-sizing border-box
+        padding 15%;
+        width 100%;
+        height 100%;
+        border-radius 50%;
+      }
     }
 
     input {

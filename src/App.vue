@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 15:46:23
- * @LastEditTime : 2019-12-18 16:32:41
+ * @LastEditTime : 2019-12-23 13:43:55
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\App.vue
@@ -11,7 +11,7 @@
     <router-view />
     <div class="app-nav">
       <router-link class="app-nav-item" to="/">首页</router-link>
-      <router-link class="app-nav-item" to="/about">关注</router-link>
+      <router-link class="app-nav-item" to="/message">消息</router-link>
       <router-link class="app-nav-item" to="/my">我的</router-link>
     </div>
   </div>

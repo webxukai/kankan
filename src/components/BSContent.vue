@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-19 13:28:25
- * @LastEditTime : 2019-12-19 13:29:50
+ * @LastEditTime : 2019-12-23 13:53:51
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\components\BSContent.vue
@@ -23,8 +23,6 @@ export default {
   },
   mounted() {
     // 初始化
-    console.log(BScroll);
-
     setTimeout(() => {
       this.bsScroll = new BScroll(this.$refs.wrap, {
         probeType: 1,
