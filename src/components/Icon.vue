@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-18 17:14:45
- * @LastEditTime : 2019-12-18 17:18:27
+ * @LastEditTime : 2019-12-24 14:39:40
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\components\my\Icon.vue
@@ -19,22 +19,6 @@
         <div class="item" v-for="itemChild in item.content" :key="itemChild.id">
           <div class="item-img">
             <van-icon class="item-img" :name="itemChild.vanIconName" />
-            <!-- <img class="item-img" src="" alt=""> -->
-            <!-- <svg
-              t="1576720109152"
-              class="icon"
-              viewBox="0 0 1024 1024"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              p-id="6284"
-              width="32"
-              height="32"
-            >
-              <path
-                d="M938.667 832l-853.333 0 0-618.667 853.333 0 0 618.667zM128 789.333l768 0 0-533.333-768 0 0 533.333zM85.333 642.667l276.011-278.656 336.661 323.328-39.68-95.68 110.848-101.163 169.493 165.504 0 154.667-853.333-2.667z"
-                p-id="6285"
-              />
-            </svg>-->
           </div>
           <div class="item-name">{{itemChild.name}}</div>
         </div>
@@ -90,15 +74,15 @@ export default {
 
     .item-wrapper {
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-start;
 
       .item {
         position: relative;
-        width: 0.5rem;
+        // width: 0.5rem;
+        width: 25%;
         height: 0.5rem;
         margin: 0 0.2rem;
 
-        // border: 1px solid green;
         .item-img {
           position: absolute;
           left: 0.08rem;

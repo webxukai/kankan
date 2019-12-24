@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:27:43
- * @LastEditTime : 2019-12-23 15:24:39
+ * @LastEditTime : 2019-12-24 14:02:38
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\My.vue
@@ -23,7 +23,7 @@
 
 <script>
 import BScroll from "better-scroll";
-import Icon from "@/components/my/Icon";
+import Icon from "@/components/Icon.vue";
 export default {
   data() {
     return {

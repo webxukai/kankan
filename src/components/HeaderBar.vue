@@ -1,14 +1,16 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-19 11:19:30
- * @LastEditTime : 2019-12-19 11:19:47
+ * @LastEditTime : 2019-12-24 14:29:38
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\components\HeaderBar.vue
  -->
 <template>
   <div class="wrapper border-1">
-    <div class="left" @click="leftClick">back</div>
+    <div class="left" @click="leftClick">
+      <van-icon class="icon" name="arrow-left" size="22"/>
+    </div>
     <div class="middle">{{title}}</div>
     <div class="right" @click="rightClick"></div>
   </div>
@@ -55,6 +57,10 @@ export default {
     text-align: center;
     line-height: navHeight;
     // border: 1px solid red;
+    .icon {
+      margin-top 0.08rem
+      // border: 1px solid red;
+      }
   }
 
   .middle {

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Icon from "@/components/my/Icon";
+import Icon from "@/components/Icon";
 import HeaderBar from "@/components/HeaderBar";
 import BSContent from "@/components/BSContent";
 export default {

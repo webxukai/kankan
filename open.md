@@ -15,3 +15,5 @@ vue add router
 cnpm install stylus --save
 
 cnpm install better-scroll --save
+
+cnpm install vue-awesome-swiper --save
