@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:10:50
- * @LastEditTime : 2019-12-23 10:24:08
+ * @LastEditTime : 2019-12-23 15:11:53
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\Home.vue
@@ -52,7 +52,7 @@ export default {
           StickFlag: true,
           author: "中文网",
           comment: "123",
-          time: "两个月前"
+          time: "1577084985350"
         },
         {
           id: 2,
@@ -65,7 +65,7 @@ export default {
           StickFlag: true,
           author: "掘金网",
           comment: "23",
-          time: "两个月前"
+          time: "1577085057608"
         },
         {
           id: 3,
@@ -79,7 +79,7 @@ export default {
           StickFlag: false,
           author: "知乎网",
           comment: "1233",
-          time: "两个月前"
+          time: "1577085017608"
         },        {
           id: 4,
           title: "澳门回归20周年",
@@ -91,7 +91,7 @@ export default {
           StickFlag: true,
           author: "中文网",
           comment: "123",
-          time: "两个月前"
+          time: "1577025057608"
         },        {
           id: 5,
           title: "澳门回归20周年",
@@ -103,7 +103,7 @@ export default {
           StickFlag: true,
           author: "中文网",
           comment: "123",
-          time: "两个月前"
+          time: "1577085457608"
         },        {
           id: 6,
           title: "澳门回归20周年",
@@ -115,7 +115,7 @@ export default {
           StickFlag: true,
           author: "中文网",
           comment: "123",
-          time: "两个月前"
+          time: "1577085027608"
         },        {
           id: 7,
           title: "澳门回归20周年",
@@ -127,7 +127,7 @@ export default {
           StickFlag: true,
           author: "中文网",
           comment: "123",
-          time: "两个月前"
+          time: "1577085017608"
         },
       ]
     };

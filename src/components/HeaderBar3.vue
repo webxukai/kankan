@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-23 10:40:40
- * @LastEditTime : 2019-12-23 11:07:14
+ * @LastEditTime : 2019-12-24 13:07:09
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\components\HeaderBar3.vue
@@ -9,10 +9,11 @@
 <template>
 <div class="wrapper">
   <div class="title">
-      消息
+      {{baseData.title}}
   </div>
   <div class="right">
-      <van-icon class="icon" name="friends-o" size="0.28rem" />
+    <div v-if="baseData.right">{{baseData.right}}</div>
+      <van-icon v-if="baseData.icon" class="icon" :name="baseData.icon" size="0.28rem" />
   </div>
 </div>
 </template>
@@ -21,7 +22,8 @@
 export default {
   name: 'HeaderBar3',
   props: {
-    msg: String
+    msg: String,
+    baseData: Object
   }
 }
 </script>
@@ -47,15 +49,18 @@ export default {
       }
       .right {
           position absolute;
-          top 10%
-          width 0.8 * navHeight 
+          top 0%
+          // width 0.8 * navHeight 
           height 0.8 * navHeight
+          line-height navHeight
           right 0.1rem
-        //   border 1px solid red
+          font-size fontSizeMin
+          // border 1px solid red
           .icon {
+              margin-top 15%
               width 100%
               height 100%
-            //   border 1px solid yellow
+              // border 1px solid yellow
           }
       }
   }

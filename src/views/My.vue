@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:27:43
- * @LastEditTime : 2019-12-18 16:24:42
+ * @LastEditTime : 2019-12-23 15:24:39
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\My.vue
@@ -10,7 +10,7 @@
   <div class="my-wrapper" ref="wrap">
     <div class="my-content">
       <div class="my-item login">
-        <div class="login-text">登录</div>
+        <router-link class="login-text" to="/login">登录</router-link>
       </div>
       <div class="border-10"></div>
       <Icon :baseData="commonUse" :titleText="titleText[0]" :link="titleLink[0]" />
@@ -239,6 +239,7 @@ export default {
         border-radius: 0.04rem;
         background-color: baseColor;
         cursor: pointer;
+        color #fff;
         z-index: 999;
       }
     }

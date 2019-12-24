@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:10:50
- * @LastEditTime : 2019-12-23 13:41:28
+ * @LastEditTime : 2019-12-24 13:05:20
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\Message.vue
@@ -9,7 +9,7 @@
 
 <template>
   <div>
-    <HeaderBar3 />
+    <HeaderBar3 :baseData = "headerBar"/>
     <BSContent class="b-s-content">
       <div class="padding-10"></div>
       <MessageCard v-for="item in messageList" :key="item.id" :baseData="item" />
@@ -33,6 +33,10 @@ export default {
   },
   data() {
     return {
+      headerBar:{
+        title : "消息",
+        icon : "friends-o"
+      },
       messageList: [
         {
           id: 1,

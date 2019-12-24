@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-20 10:52:30
- * @LastEditTime : 2019-12-20 10:53:14
+ * @LastEditTime : 2019-12-23 15:16:25
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\components\HotPlate.vue
@@ -24,16 +24,25 @@
       <span class="active" v-if="baseData.StickFlag">置顶</span>
       <span>{{baseData.author}}</span>
       <span>{{baseData.comment}}评论</span>
-      <span>{{baseData.time}}</span>
+      <span>{{time }}</span>
     </div>
   </div>
 </template>
 
 <script>
+import { updateTimeShow } from "@/util/time.js";
 export default {
   name: "HotPlate",
   props: {
     baseData: Object
+  },
+  computed: {
+    time () {
+      return updateTimeShow(+this.baseData.time) 
+    }
+  },
+  mounted() {
+    
   }
 };
 </script>
@@ -55,9 +64,7 @@ export default {
       width: 33%;
       margin: 0 0.03rem;
       height: 0.7rem;
-      // padding-bottom abc = 0.6 * @width;
-    //   background-color: lowBGC;
-    //   border 1px solid red
+
       img {
         width: 100%;
         height: @height;
