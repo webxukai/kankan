@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:10:50
- * @LastEditTime : 2019-12-24 14:13:22
+ * @LastEditTime : 2019-12-25 13:36:17
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\Home.vue
@@ -9,18 +9,21 @@
 <template>
   <div class="wrapper">
     <van-popup v-model="popupShow" position="bottom" :style="{ height: '2.5rem' }">
-      <AddSwiper/>
+      <AddSwiper />
     </van-popup>
     <HeaderBar2 />
     <RowBread class="row-bread-wrapper border-1" />
     <Add v-show="!popupShow" @click.native="bindAddClick" />
     <BSContent class="b-s-content-wrapper">
-      <HotPlate
-        class="hot-plate-wrapper border-1"
-        v-for="item in hotPlate"
-        :key="item.id"
-        :baseData="item"
-      />
+      <router-link to="/articeDetails">
+        <HotPlate
+          class="hot-plate-wrapper border-1"
+          v-for="item in hotPlate"
+          :key="item.id"
+          :baseData="item"
+        />
+      </router-link>
+
       <div class="border-10"></div>
     </BSContent>
   </div>
@@ -32,7 +35,7 @@ import RowBread from "@/components/RowBread.vue";
 import BSContent from "@/components/BSContent.vue";
 import HotPlate from "@/components/HotPlate.vue";
 import Add from "@/components/Add.vue";
-import AddSwiper from '@/components/AddSwiper.vue';
+import AddSwiper from "@/components/AddSwiper.vue";
 export default {
   name: "home",
   components: {

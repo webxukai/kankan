@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-11-04 16:10:50
- * @LastEditTime : 2019-12-24 12:47:29
+ * @LastEditTime : 2019-12-25 13:36:40
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\router\index.js
@@ -47,6 +47,11 @@ const routes = [{
     path: '/register',
     name: 'register',
     component: () => import('@/views/Register.vue')
+  },
+  {
+    path: '/articeDetails',
+    name: 'articeDetails',
+    component: () => import('@/views/ArticeDetails.vue')
   }
 ]
 
