@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2019-12-26 15:03:22
+ * @LastEditTime : 2019-12-26 15:29:18
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \kankan\kankan-ser\app.js
+ */
 const Koa = require('koa')
 const app = new Koa()
 const views = require('koa-views')
@@ -18,11 +26,11 @@ app.use(bodyparser({
 }))
 app.use(json())
 app.use(logger())
-app.use(require('koa-static')(__dirname + '/public'))
+app.use(require('koa-static')(__dirname + '/dist'))
 
-app.use(views(__dirname + '/views', {
-  extension: 'ejs'
-}))
+// app.use(views(__dirname + '/views', {
+//   extension: 'ejs'
+// }))
 
 // logger
 app.use(async (ctx, next) => {
