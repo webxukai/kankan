@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:10:50
- * @LastEditTime : 2019-12-24 13:05:20
+ * @LastEditTime : 2019-12-25 17:38:17
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\Message.vue
@@ -12,7 +12,10 @@
     <HeaderBar3 :baseData = "headerBar"/>
     <BSContent class="b-s-content">
       <div class="padding-10"></div>
-      <MessageCard v-for="item in messageList" :key="item.id" :baseData="item" />
+      <router-link to="/messageTalk" v-for="item in messageList" :key="item.id">
+      <MessageCard  :baseData="item" />
+      </router-link>
+      
     </BSContent>
   </div>
 </template>
