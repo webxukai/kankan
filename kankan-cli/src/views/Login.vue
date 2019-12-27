@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-23 15:21:11
- * @LastEditTime : 2019-12-24 12:56:45
+ * @LastEditTime : 2019-12-27 15:07:08
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\Login.vue
@@ -31,7 +31,7 @@
               fill="#aaaaaa"
             />
           </svg>
-          <input type="text" placeholder="你的手机号/邮箱/自定义" />
+          <input type="text" placeholder="你的手机号/邮箱/自定义" v-model="userName" />
         </div>
         <div class="input-wrapper">
           <svg
@@ -50,11 +50,11 @@
               fill="#aaaaaa"
             />
           </svg>
-          <input type="password" placeholder="请输入密码" />
+          <input type="password" placeholder="请输入密码" v-model="password" />
         </div>
         <div class="loginbutton">
           <router-link to="/register" class="item">注册账号</router-link>
-          <div class="item active">登录</div>
+          <div class="item active" @click="bindLoginClick">登录</div>
         </div>
         <div class="bottom-text">
           登录即代表你同意
@@ -69,6 +69,7 @@
 <script>
 import HeaderBar3 from "@/components/HeaderBar3.vue";
 import BSContent from "@/components/BSContent.vue";
+const qs = require("qs");
 export default {
   name: "Login",
   props: {
@@ -80,11 +81,29 @@ export default {
   },
   data() {
     return {
+      userName: "",
+      password: "",
       headerBar: {
         title: "登录",
-        right:"忘记密码?"
+        right: "忘记密码?"
       }
     };
+  },
+  methods: {
+    bindLoginClick() {
+      let params = {
+        userName:this.userName,
+        password:this.password
+      }
+      this.$http
+        .post(this.base_url +  "/users/login",qs.stringify(params) )
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
   }
 };
 </script>
@@ -111,8 +130,8 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     padding: 0 0.5rem;
-    // border: 1px solid red;
 
+    // border: 1px solid red;
     .input-wrapper {
       display: flex;
       height: h = 0.4rem;
@@ -148,7 +167,7 @@ export default {
         border: 0.01rem solid baseColor;
         font-size: fontSizeSmall;
         color: baseColor;
-        cursor pointer
+        cursor: pointer;
 
         &.active {
           background-color: baseColor;
@@ -161,10 +180,11 @@ export default {
       height: h = 0.4rem;
       text-align: center;
       line-height: h;
-      font-size fontSizeMin
+      font-size: fontSizeMin;
+
       span {
-        color baseColor
-        cursor pointer
+        color: baseColor;
+        cursor: pointer;
       }
     }
   }

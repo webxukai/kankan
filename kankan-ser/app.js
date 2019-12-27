@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-26 15:03:22
- * @LastEditTime : 2019-12-26 15:29:18
+ * @LastEditTime : 2019-12-27 14:05:14
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\kankan-ser\app.js
@@ -24,6 +24,7 @@ onerror(app)
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }))
+
 app.use(json())
 app.use(logger())
 app.use(require('koa-static')(__dirname + '/dist'))

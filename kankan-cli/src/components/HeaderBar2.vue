@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-19 15:46:06
- * @LastEditTime : 2019-12-23 13:51:43
+ * @LastEditTime : 2019-12-27 16:33:21
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\components\HeaderBar2.vue
@@ -76,6 +76,7 @@ export default {
       right: 0;
       padding: 0 0.1rem;
       border-radius: 0.04rem;
+      color grayColor
     }
   }
 
