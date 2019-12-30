@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-11-04 17:44:49
- * @LastEditTime : 2019-12-27 14:32:06
+ * @LastEditTime : 2019-12-30 14:08:01
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\vue.config.js
@@ -25,6 +25,7 @@ module.exports = {
       '/pro': { //正式
         target: 'xxx'
       }
-    }
+    },
+    disableHostCheck: true,
   },
 }

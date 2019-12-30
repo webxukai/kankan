@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-11-04 15:46:23
- * @LastEditTime : 2019-12-27 14:37:47
+ * @LastEditTime : 2019-12-30 15:09:30
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\main.js
@@ -20,7 +20,9 @@ import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */ )
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
-Vue.prototype.base_url = 'http://192.168.43.33:8080/api'
+// Vue.prototype.base_url = 'http://192.168.43.33:8080/api'
+Vue.prototype.base_url = 'http://129.211.47.103:80/api'
+
 axios.defaults.headers.common['Content-Type'] = "application/json";
 new Vue({
   store,
