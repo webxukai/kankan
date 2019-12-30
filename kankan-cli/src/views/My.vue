@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-04 16:27:43
- * @LastEditTime : 2019-12-24 14:02:38
+ * @LastEditTime : 2019-12-30 11:06:18
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\My.vue
@@ -9,11 +9,14 @@
 <template>
   <div class="my-wrapper" ref="wrap">
     <div class="my-content">
-      <div class="my-item login">
+      <div class="my-item login" v-if="!token">
         <router-link class="login-text" to="/login">登录</router-link>
       </div>
+      <UserTitle v-else :userName = "token"/>
       <div class="border-10"></div>
       <Icon :baseData="commonUse" :titleText="titleText[0]" :link="titleLink[0]" />
+      <div class="border-10"></div>
+      <Icon :baseData="discover" :titleText="titleText[1]" :link="titleLink[1]" />
       <div class="border-10"></div>
       <Icon :baseData="discover" :titleText="titleText[1]" :link="titleLink[1]" />
       <div class="border-10"></div>
@@ -24,9 +27,11 @@
 <script>
 import BScroll from "better-scroll";
 import Icon from "@/components/Icon.vue";
+import UserTitle from "@/components/UserTitle";
 export default {
   data() {
     return {
+      token: localStorage.token || "",
       commonUse: [
         {
           id: 1,
@@ -197,11 +202,12 @@ export default {
         }
       ],
       titleText: ["常用", "发现"],
-      titleLink: ["commonTools","discover"]
+      titleLink: ["commonTools", "discover"]
     };
   },
   components: {
-    Icon
+    Icon,
+    UserTitle
   },
 
   computed: {},
@@ -239,7 +245,7 @@ export default {
         border-radius: 0.04rem;
         background-color: baseColor;
         cursor: pointer;
-        color #fff;
+        color: #fff;
         z-index: 999;
       }
     }

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-26 15:03:22
- * @LastEditTime : 2019-12-27 15:37:54
+ * @LastEditTime : 2019-12-30 10:54:41
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\kankan-ser\routes\users.js
@@ -53,11 +53,44 @@ router.post('/login', async (ctx, next) => {
   }
   ctx.body = responeseData
 })
+router.post('/register', async (ctx, next) => {
+  const {
+    userName,
+    password
+  } = ctx.request.body;
+  let md5 = crypto.createHash('md5');
+  let responeseData = {}
+  if (!userName && !password) {
+    responeseData = {
+      code: 2,
+      msg: '缺少账号或密码'
+    }
+    ctx.body = responeseData;
+    return;
+  }
+  let querySql = `select * from userinfo where userName='${userName}';`
+  const userVerify = await services.query(querySql);
+  if (userVerify.length !== 0) {
+    responeseData = {
+      code: 1,
+      msg: '用户名已被注册'
+    }
+  } else {
+    let insertSql = `INSERT INTO userinfo (userName,password) VALUES ( '${userName}' , '${md5.update(password).digest(verify)}' );`
+    const userVerify = await services.query(insertSql);
+    responeseData = {
+      code: 0,
+      msg: '注册成功',
+      token: userName
+    }
+  }
+  ctx.body = responeseData
+})
 
-router.post('/user/logout', async (ctx, next) => {
+router.post('/logout', async (ctx, next) => {
   const responeseData = {
     data: 'success',
-    code: 0
+    code: 0,
   }
   ctx.body = responeseData;
 })

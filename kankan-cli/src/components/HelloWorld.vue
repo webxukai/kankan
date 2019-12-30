@@ -1,10 +1,10 @@
 <!--
  * @Author: your name
- * @Date: 2019-11-04 15:46:23
- * @LastEditTime : 2019-12-23 15:34:42
- * @LastEditors  : Please set LastEditors
+ * @Date: 2019-12-26 14:56:18
+ * @LastEditTime: 2019-12-30 10:17:47
+ * @LastEditors: your name
  * @Description: In User Settings Edit
- * @FilePath: \kankan\src\components\HelloWorld.vue
+ * @FilePath: \kankan\kankan-cli\src\components\HelloWorld.vue
  -->
 <template>
 <div>

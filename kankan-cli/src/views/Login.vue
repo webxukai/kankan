@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-23 15:21:11
- * @LastEditTime : 2019-12-27 15:07:08
+ * @LastEditTime : 2019-12-30 10:51:02
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \kankan\src\views\Login.vue
@@ -97,10 +97,13 @@ export default {
       }
       this.$http
         .post(this.base_url +  "/users/login",qs.stringify(params) )
-        .then(function(response) {
-          console.log(response);
+        .then((response) => {
+          if (response.data.code === 0) {
+            localStorage.setItem("token",response.data.token)
+            this.$router.replace("/my");
+          }
         })
-        .catch(function(error) {
+        .catch((error) => {
           console.log(error);
         });
     }
